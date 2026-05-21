@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+dist/
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment
+.env
+.env*.local
+
+# editor / os
+.DS_Store
+Thumbs.db
+.vscode/
+
+# local duplicate source assets
+profile pic.jpeg
+Sriram_PS_Resume.pdf
