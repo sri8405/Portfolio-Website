@@ -36,8 +36,7 @@ export const rotatingTitles = [
 export const profileStats = [
   { label: "CGPA", value: "8.5" },
   { label: "Projects", value: "03+" },
-  { label: "Hackathons", value: "04+" },
-  { label: "Certifications", value: "Java" }
+  { label: "Hackathons", value: "04+" }
 ];
 
 export const techGroups: Array<{
