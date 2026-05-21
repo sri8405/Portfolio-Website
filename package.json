@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/swc-win32-x64-msvc": "^14.2.33",
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
