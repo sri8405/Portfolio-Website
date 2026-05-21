@@ -9,6 +9,10 @@ out/
 build/
 dist/
 
+# package manager lockfile is intentionally not committed so Vercel resolves
+# platform-specific Next.js SWC packages for its Linux build environment.
+package-lock.json
+
 # logs
 logs/
 *.log
