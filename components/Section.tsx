@@ -15,6 +15,7 @@ type SectionProps = {
 export function Section({ id, eyebrow, title, children, className }: SectionProps) {
   return (
     <section id={id} className={cn("relative overflow-hidden py-16 sm:py-24 lg:py-32", className)}>
+      <div className="orbit-mark right-[-18rem] top-8 hidden lg:block" />
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         {(eyebrow || title) && (
           <motion.div

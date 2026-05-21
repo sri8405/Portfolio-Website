@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import {
   ArrowDown,
   ArrowUpRight,
-  Award,
   BriefcaseBusiness,
   Code2,
   Cpu,
@@ -17,8 +16,9 @@ import {
   Mail,
   MapPin,
   Phone,
+  Rocket,
+  Satellite,
   Send,
-  Sparkles,
   Trophy,
   UserRound,
   Zap
@@ -88,7 +88,7 @@ function HeroPortrait() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(72,226,255,.08),transparent_42%),linear-gradient(to_top,rgba(5,5,7,.55),transparent_42%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,.14),transparent)] opacity-35" />
         <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/10 bg-black/38 p-4 backdrop-blur-xl sm:inset-x-6 sm:bottom-6">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-cyan sm:text-xs sm:tracking-[0.24em]">AI/ML Engineer</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-cyan sm:text-xs sm:tracking-[0.24em]">Orbital Engineer</p>
           <p className="mt-1 font-display text-lg font-semibold text-white">Sriram PS</p>
         </div>
       </div>
@@ -102,19 +102,19 @@ function Hero() {
       <div className="mx-auto grid min-h-[calc(100vh-6rem)] w-full max-w-7xl items-center gap-10 px-5 pb-24 sm:px-8 sm:pb-16 lg:grid-cols-[1.08fr_.92fr]">
         <motion.div initial="hidden" animate="show" transition={{ staggerChildren: 0.12 }} className="relative z-10">
           <motion.div variants={fadeUp} className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan/20 bg-cyan/[0.08] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan sm:px-4 sm:text-xs sm:tracking-[0.22em]">
-            <Sparkles size={14} /> Open to Opportunities
+            <Satellite size={14} /> Mission Channel Open
           </motion.div>
           <motion.h1 variants={fadeUp} className="max-w-5xl font-display text-5xl font-semibold leading-[0.94] tracking-tight text-white sm:text-8xl lg:text-9xl">
             Sriram PS
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-5 max-w-2xl text-base font-medium leading-7 text-white/82 sm:mt-6 sm:text-2xl sm:leading-normal">
-            Software Engineer & AI/ML Developer building scalable systems, intelligent products, and polished full-stack experiences.
+            Software Engineer & AI/ML Developer designing reliable systems, intelligent products, and polished launch-ready experiences.
           </motion.p>
           <motion.p variants={fadeUp} className="mt-5 flex flex-col font-display text-lg text-white/64 sm:block sm:text-2xl">
-            Currently shipping as a <RotatingTitle />
+            Currently in orbit as a <RotatingTitle />
           </motion.p>
           <motion.div variants={fadeUp} className="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
-            <MagneticButton href="#projects" className="w-full sm:w-auto">View Projects</MagneticButton>
+            <MagneticButton href="#projects" className="w-full sm:w-auto">View Missions</MagneticButton>
             <MagneticButton href="/resume.pdf" variant="ghost" className="w-full sm:w-auto">
               <span className="inline-flex items-center gap-2"><Download size={16} /> Download Resume</span>
             </MagneticButton>
@@ -147,7 +147,7 @@ function Hero() {
 function About() {
   const snippets = ["build: scalable APIs", "model: recommendation logic", "ship: clean product flows", "debug: systems under pressure"];
   return (
-    <Section id="about" eyebrow="About" title="Engineering mindset, product taste, AI curiosity.">
+    <Section id="about" eyebrow="Mission Log" title="Engineering mindset with orbital precision.">
       <div className="grid gap-6 lg:grid-cols-[.95fr_1.05fr]">
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="glass overflow-x-auto rounded-3xl p-5 sm:p-8">
           <div className="mb-8 flex items-center gap-2">
@@ -159,7 +159,7 @@ function About() {
             <p><span className="text-cyan">const</span> engineer = &#123;</p>
             <p className="pl-5">degree: <span className="text-acid">&quot;AI & ML Undergraduate&quot;</span>,</p>
             <p className="pl-5">focus: <span className="text-acid">&quot;Backend systems + scalable apps&quot;</span>,</p>
-            <p className="pl-5">mindset: <span className="text-acid">&quot;Solve clearly. Ship thoughtfully.&quot;</span>,</p>
+            <p className="pl-5">mindset: <span className="text-acid">&quot;Navigate complexity. Launch thoughtfully.&quot;</span>,</p>
             <p className="pl-5">impact: <span className="text-acid">&quot;Real-world engineering through internships and projects&quot;</span></p>
             <p>&#125;;</p>
           </div>
@@ -177,7 +177,7 @@ function About() {
               <Code2 className="mb-8 text-cyan" />
               <p className="font-display text-xl font-semibold text-white">{item}</p>
               <p className="mt-3 text-sm leading-6 text-white/58">
-                I approach software as a system of tradeoffs: reliability, latency, developer clarity, and user value all matter.
+                I approach software like mission architecture: reliability, latency, clarity, and user value all stay on the flight path.
               </p>
             </motion.div>
           ))}
@@ -189,10 +189,14 @@ function About() {
 
 function Profile() {
   return (
-    <Section id="profile" eyebrow="Engineer Profile" title="A compact dashboard of signal.">
+    <Section id="profile" eyebrow="Command Deck" title="A compact dashboard of signal.">
       <div className="grid gap-5 lg:grid-cols-3">
         <div className="glass rounded-3xl p-5 sm:p-7 lg:col-span-1">
           <div className="flex items-center gap-3 text-cyan"><UserRound /><span className="font-semibold">Sriram PS</span></div>
+          <div className="mt-6 rounded-2xl border border-cyan/15 bg-black/24 p-4">
+            <p className="text-xs uppercase tracking-[0.22em] text-white/42">Current Orbit</p>
+            <p className="mt-2 text-sm text-white/70">AI/ML systems, backend architecture, and product engineering.</p>
+          </div>
           <div className="mt-8 space-y-5 text-sm text-white/70">
             <p className="flex items-center gap-3"><MapPin size={17} /> Bangalore, Karnataka, India</p>
             <p className="flex items-center gap-3"><GraduationCap size={17} /> Nitte Meenakshi Institute of Technology</p>
@@ -227,7 +231,7 @@ function Profile() {
 
 function TechStack() {
   return (
-    <Section id="stack" eyebrow="Tech Stack" title="A futuristic engineering control panel.">
+    <Section id="stack" eyebrow="Systems Bay" title="Tools calibrated for deep-space builds.">
       <div className="grid gap-5 lg:grid-cols-2">
         {techGroups.map((group, groupIndex) => (
           <motion.div
@@ -261,7 +265,7 @@ function TechStack() {
 
 function Experience() {
   return (
-    <Section id="experience" eyebrow="Experience" title="Internships across product systems and embedded Linux.">
+    <Section id="experience" eyebrow="Flight Path" title="Internships across product systems and embedded Linux.">
       <div className="relative space-y-6 before:absolute before:left-4 before:top-0 before:h-full before:w-px before:bg-gradient-to-b before:from-cyan before:via-white/20 before:to-violet md:before:left-1/2">
         {experiences.map((item, index) => (
           <motion.article
@@ -293,7 +297,7 @@ function Experience() {
 
 function Projects() {
   return (
-    <Section id="projects" eyebrow="Projects" title="Product-style showcases with engineering depth.">
+    <Section id="projects" eyebrow="Mission Archive" title="Launch-ready projects with engineering depth.">
       <div className="grid gap-6 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.article
@@ -305,14 +309,15 @@ function Projects() {
             whileHover={{ y: -8 }}
             className="glass group flex min-h-[470px] flex-col overflow-hidden rounded-3xl sm:min-h-[520px]"
           >
-            <div className="relative h-36 overflow-hidden border-b border-white/10 bg-black/40 sm:h-44">
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(72,226,255,.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.06)_1px,transparent_1px)] bg-[size:28px_28px] transition duration-500 group-hover:scale-110" />
-              <div className="absolute inset-x-5 top-8 rounded-2xl border border-white/12 bg-white/[0.06] p-4 shadow-glow backdrop-blur sm:inset-x-8 sm:top-10">
-                <div className="mb-3 h-2 w-20 rounded-full bg-cyan/60" />
-                <div className="space-y-2">
-                  <div className="h-2 rounded-full bg-white/18" />
-                  <div className="h-2 w-2/3 rounded-full bg-white/12" />
-                </div>
+            <div className="star-panel relative h-36 overflow-hidden border-b border-white/10 bg-black/40 sm:h-44">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(72,226,255,.16),transparent_9rem),radial-gradient(circle_at_78%_30%,rgba(143,92,255,.14),transparent_7rem)] transition duration-500 group-hover:scale-110" />
+              <div className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/18" />
+              <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/8" />
+              <div className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan shadow-glow" />
+              <div className="absolute left-[calc(50%+42px)] top-[calc(50%-15px)] h-2 w-2 rounded-full bg-violet shadow-violet" />
+              <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between rounded-full border border-white/10 bg-black/36 px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-white/48 backdrop-blur sm:left-8 sm:right-8">
+                <span>Mission</span>
+                <span>{String(index + 1).padStart(2, "0")}</span>
               </div>
             </div>
             <div className="flex flex-1 flex-col p-5 sm:p-6">
@@ -338,11 +343,11 @@ function Projects() {
 
 function Achievements() {
   return (
-    <Section id="achievements" eyebrow="Achievements" title="Signals of initiative and momentum.">
+    <Section id="achievements" eyebrow="Telemetry" title="Signals of initiative and momentum.">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {achievements.map((item, index) => (
           <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }} className="glass rounded-3xl p-6">
-            {index % 2 ? <Trophy className="text-violet" /> : <Award className="text-cyan" />}
+            {index % 2 ? <Trophy className="text-violet" /> : <Rocket className="text-cyan" />}
             <p className="mt-10 font-display text-4xl font-semibold text-white">{item.value}x</p>
             <h3 className="mt-3 font-semibold text-white">{item.title}</h3>
             <p className="mt-2 text-sm text-white/52">{item.metric}</p>
@@ -366,7 +371,7 @@ function Terminal() {
   const output = commands[input.toLowerCase()] ?? ["Command not found. Try whoami, skills, projects, experience, contact, education."];
 
   return (
-    <Section id="terminal" eyebrow="Interactive Terminal" title="Ask the portfolio directly.">
+    <Section id="terminal" eyebrow="Ship Terminal" title="Query the onboard portfolio system.">
       <div className="terminal-glow scanline relative overflow-hidden rounded-3xl border border-cyan/15 bg-black/78 p-4 font-mono sm:p-5">
         <div className="mb-6 flex items-center gap-2">
           <span className="h-3 w-3 rounded-full bg-red-400" />
@@ -395,7 +400,7 @@ function Contact() {
   };
 
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's Build Something Amazing.">
+    <Section id="contact" eyebrow="Docking Channel" title="Let's Build Something Amazing.">
       <div className="grid gap-6 lg:grid-cols-[.85fr_1.15fr]">
         <div className="glass rounded-3xl p-5 sm:p-7">
           <Zap className="mb-8 text-cyan" />

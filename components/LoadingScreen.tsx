@@ -44,7 +44,8 @@ export function LoadingScreen() {
           transition={{ duration: 0.7, ease: "easeInOut" }}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-ink"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(72,226,255,.08)_1px,transparent_1px),linear-gradient(90deg,rgba(143,92,255,.08)_1px,transparent_1px)] bg-[size:54px_54px] opacity-40 animate-gridmove" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_28%,rgba(72,226,255,.16),transparent_24rem),radial-gradient(circle_at_78%_32%,rgba(143,92,255,.12),transparent_26rem),linear-gradient(180deg,#02030a,#000)]" />
+          <div className="absolute inset-0 star-panel opacity-60" />
           <div className="relative w-[min(420px,90vw)] text-center">
             <motion.div
               animate={{ rotate: 360 }}
