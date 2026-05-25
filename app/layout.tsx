@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { BackgroundFX } from "@/components/BackgroundFX";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <BackgroundFX />
         <CustomCursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );
