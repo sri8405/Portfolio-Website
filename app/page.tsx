@@ -43,8 +43,6 @@ import {
   currentlyBuilding,
   experiences,
   featuredProjects,
-  githubSignal,
-  journalPosts,
   profileStats,
   rotatingTitles,
   smartParking,
@@ -472,52 +470,6 @@ function Research() {
   );
 }
 
-function GitHubAndBlog() {
-  return (
-    <Section id="blog" eyebrow="GitHub + Engineering Journal" title="Build signal, technical writing, and research notes.">
-      <div className="grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-        <div className="glass rounded-3xl p-6">
-          <div className="mb-6 flex items-center justify-between">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-cyan">GitHub integration</p>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-white">github.com/sri8405</h3>
-            </div>
-            <Github className="text-cyan" />
-          </div>
-          <div className="grid grid-cols-7 gap-1">
-            {Array.from({ length: 112 }).map((_, index) => (
-              <span key={index} className="aspect-square rounded-[3px]" style={{ background: `rgba(72,226,255,${0.06 + (index % 6) * 0.06})` }} />
-            ))}
-          </div>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {githubSignal.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-white/10 bg-black/24 p-4">
-                <p className="text-xs uppercase tracking-[0.18em] text-white/38">{item.label}</p>
-                <p className="mt-2 font-semibold text-white">{item.value}</p>
-              </div>
-            ))}
-          </div>
-          <a href={contact.github} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan">Open GitHub <ArrowUpRight size={16} /></a>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {journalPosts.map((post, index) => (
-            <motion.article key={post.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.04 }} className="glass rounded-3xl p-5 transition hover:-translate-y-1 hover:border-cyan/30">
-              <div className="mb-8 flex items-center justify-between text-xs text-white/42">
-                <span>{post.date}</span>
-                <span>{post.read}</span>
-              </div>
-              <h3 className="font-display text-xl font-semibold text-white">{post.title}</h3>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {post.tags.map((tag) => <span key={tag} className="rounded-full bg-white/[0.06] px-2.5 py-1 text-[11px] text-cyan">{tag}</span>)}
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </div>
-    </Section>
-  );
-}
-
 function Contact() {
   const [copied, setCopied] = useState(false);
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => event.preventDefault();
@@ -583,7 +535,6 @@ export default function Home() {
       <CurrentlyBuilding />
       <Experience />
       <Research />
-      <GitHubAndBlog />
       <Contact />
       <Footer />
     </main>

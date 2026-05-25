@@ -103,12 +103,12 @@ export function BackgroundFX() {
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(34,51,84,.48),transparent_48%),linear-gradient(180deg,#03040a_0%,#06070d_48%,#020207_100%)]" />
       <canvas ref={canvasRef} className="absolute inset-0 opacity-80" />
-      {["Python", "Docker", "TensorFlow", "Git", "React", "Ollama"].map((tech, index) => (
+      {["Python", "Docker", "TensorFlow", "Git", "React", "Ollama", "Next.js"].map((tech, index) => (
         <div
           key={tech}
-          className="absolute hidden rounded-full border border-white/10 bg-white/[0.035] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/28 blur-[0.1px] lg:block"
+          className="absolute hidden rounded-full border border-white/15 bg-white/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/55 shadow-glow lg:block"
           style={{
-            left: `${8 + index * 14}%`,
+            left: `${7 + index * 12}%`,
             top: `${18 + (index % 3) * 22}%`,
             animation: `drift ${5 + index * 0.7}s ease-in-out infinite`
           }}

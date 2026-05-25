@@ -39,7 +39,6 @@ export const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Research", href: "#research" },
-  { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -48,7 +47,6 @@ export const commandItems = [
   { label: "Resume", href: contact.resume, hint: "Download PDF" },
   { label: "Contact", href: "#contact", hint: "Start a conversation" },
   { label: "GitHub", href: contact.github, hint: "github.com/sri8405" },
-  { label: "Blog", href: "#blog", hint: "Engineering journal" },
   { label: "Skills", href: "#skills", hint: "Technical stack" }
 ];
 
@@ -315,20 +313,4 @@ export const systemsResearch = [
   "Raspberry Pi OS Lite deployment thinking",
   "VirtualBox limitations, device access issues, and resource constraints",
   "Low-level Linux experimentation as infrastructure learning"
-];
-
-export const journalPosts = [
-  { title: "Running LLMs Locally", date: "2026", read: "6 min", tags: ["LLMs", "Ollama", "Hardware"] },
-  { title: "Understanding DNS", date: "2026", read: "5 min", tags: ["Networking", "Backend"] },
-  { title: "Servlets & Tomcat Explained", date: "2026", read: "7 min", tags: ["Java", "Web"] },
-  { title: "Building AI Systems on Low-End Hardware", date: "2026", read: "8 min", tags: ["AI", "Systems"] },
-  { title: "Challenges in Indian Autonomous Driving", date: "2026", read: "6 min", tags: ["Mobility", "AI"] },
-  { title: "Smart City AI Infrastructure", date: "2026", read: "9 min", tags: ["Smart Cities", "Architecture"] }
-];
-
-export const githubSignal = [
-  { label: "Profile", value: "sri8405" },
-  { label: "Featured Focus", value: "AI + Systems" },
-  { label: "Repo Strategy", value: "Curated signal" },
-  { label: "Activity", value: "Build logs + commits" }
 ];
