@@ -10,16 +10,18 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-space", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Sriram PS | Software Engineer & AI/ML Developer",
+  title: "Sriram PS | AI/ML Engineer & Intelligent Systems Builder",
   description:
-    "A cinematic engineering portfolio for Sriram PS, AI/ML undergraduate and software engineer focused on backend systems, full-stack products, and applied intelligence.",
-  keywords: ["Sriram PS", "Software Engineer", "AI ML Developer", "Backend Engineer", "Portfolio"],
+    "Engineering portfolio for Sriram PS: AI/ML systems, smart-city platforms, backend architecture, Linux research, zero-knowledge proof experiments, and product engineering.",
+  keywords: ["Sriram PS", "AI ML Engineer", "Smart Parking System", "Systems Engineer", "Backend Engineer", "Portfolio", "Linux Research"],
   authors: [{ name: "Sriram PS" }],
+  metadataBase: new URL("https://sriram-ps.vercel.app"),
   openGraph: {
-    title: "Sriram PS | Software Engineer & AI/ML Developer",
-    description: "Futuristic AI engineer portfolio and digital headquarters.",
+    title: "Sriram PS | AI/ML Engineer & Intelligent Systems Builder",
+    description: "Premium engineering portfolio focused on intelligent systems, smart-city AI, backend architecture, and research-driven applications.",
     type: "website"
-  }
+  },
+  robots: { index: true, follow: true }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

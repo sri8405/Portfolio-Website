@@ -4,16 +4,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const bootLines = [
-  "initializing_sriram.exe",
-  "boot sequence started",
-  "loading developer profile",
-  "compiling projects",
-  "fetching engineering data",
-  "system online",
-  "authentication successful",
-  "entering workspace",
-  "loading neural modules",
-  "welcome back, recruiter"
+  "Initializing Sriram.exe...",
+  "Loading neural pathways...",
+  "Deploying AI systems...",
+  "Connecting GitHub nodes...",
+  "Compiling creativity...",
+  "Mounting smart-city telemetry...",
+  "Calibrating systems research...",
+  "Portfolio runtime online"
 ];
 
 export function LoadingScreen() {

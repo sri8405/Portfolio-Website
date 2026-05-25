@@ -1,10 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+import { CommandPalette } from "@/components/CommandPalette";
 import { navItems } from "@/lib/data";
 
 export function Header() {
+  const [light, setLight] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("light", light);
+  }, [light]);
+
   return (
     <>
       <motion.header
@@ -20,15 +28,24 @@ export function Header() {
           <div className="hidden items-center gap-1 md:flex">
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="rounded-full px-3 py-2 text-xs font-medium text-white/62 transition hover:bg-white/[0.08] hover:text-white"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
           <div className="flex items-center gap-1 sm:gap-2">
+            <CommandPalette />
+            <button
+              type="button"
+              onClick={() => setLight((value) => !value)}
+              aria-label="Toggle color theme"
+              className="rounded-full p-2 text-white/68 transition hover:bg-white/10 hover:text-cyan"
+            >
+              {light ? <Moon size={17} /> : <Sun size={17} />}
+            </button>
             <a aria-label="GitHub" href="https://github.com/sri8405" className="rounded-full p-2 text-white/68 transition hover:bg-white/10 hover:text-cyan">
               <Github size={17} />
             </a>
@@ -43,8 +60,8 @@ export function Header() {
       </motion.header>
       <nav className="fixed bottom-3 left-1/2 z-40 flex w-[calc(100%-20px)] -translate-x-1/2 gap-1 overflow-x-auto rounded-full border border-white/10 bg-black/58 p-1 backdrop-blur-xl md:hidden">
         {navItems.map((item) => (
-          <a key={item} href={`#${item.toLowerCase()}`} className="shrink-0 rounded-full px-3 py-2 text-[11px] font-medium text-white/68">
-            {item}
+          <a key={item.label} href={item.href} className="shrink-0 rounded-full px-3 py-2 text-[11px] font-medium text-white/68">
+            {item.label}
           </a>
         ))}
       </nav>
