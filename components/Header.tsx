@@ -1,18 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { CommandPalette } from "@/components/CommandPalette";
 import { navItems } from "@/lib/data";
 
 export function Header() {
-  const [light, setLight] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("light", light);
-  }, [light]);
-
   return (
     <>
       <motion.header
@@ -38,14 +31,6 @@ export function Header() {
           </div>
           <div className="flex items-center gap-1 sm:gap-2">
             <CommandPalette />
-            <button
-              type="button"
-              onClick={() => setLight((value) => !value)}
-              aria-label="Toggle color theme"
-              className="rounded-full p-2 text-white/60 transition hover:bg-white/[0.06] hover:text-blue-500"
-            >
-              {light ? <Moon size={17} /> : <Sun size={17} />}
-            </button>
             <a aria-label="GitHub" href="https://github.com/sri8405" className="rounded-full p-2 text-white/60 transition hover:bg-white/[0.06] hover:text-blue-500">
               <Github size={17} />
             </a>
