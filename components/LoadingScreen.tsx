@@ -3,34 +3,27 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const bootLines = [
-  "Initializing Sriram.exe...",
-  "Loading neural pathways...",
-  "Deploying AI systems...",
-  "Connecting GitHub nodes...",
-  "Compiling creativity...",
-  "Mounting smart-city telemetry...",
-  "Calibrating systems research...",
-  "Portfolio runtime online"
-];
-
 export function LoadingScreen() {
   const [progress, setProgress] = useState(0);
-  const [visibleLines, setVisibleLines] = useState(0);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    let currentLine = 0;
+    const duration = 400; // 400ms loading time
+    const interval = 20;
+    const step = 100 / (duration / interval);
+    
     const timer = window.setInterval(() => {
-      currentLine += 1;
-      setVisibleLines(currentLine);
-      setProgress(Math.min(100, Math.round((currentLine / bootLines.length) * 100)));
+      setProgress((prev) => {
+        const next = prev + step;
+        if (next >= 100) {
+          window.clearInterval(timer);
+          window.setTimeout(() => setDone(true), 100);
+          return 100;
+        }
+        return next;
+      });
+    }, interval);
 
-      if (currentLine >= bootLines.length) {
-        window.clearInterval(timer);
-        window.setTimeout(() => setDone(true), 720);
-      }
-    }, 280);
     return () => window.clearInterval(timer);
   }, []);
 
@@ -38,37 +31,25 @@ export function LoadingScreen() {
     <AnimatePresence>
       {!done && (
         <motion.div
-          exit={{ opacity: 0, scale: 1.02 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-ink"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-[#09090B] select-none"
+          onClick={() => setDone(true)}
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_28%,rgba(72,226,255,.16),transparent_24rem),radial-gradient(circle_at_78%_32%,rgba(143,92,255,.12),transparent_26rem),linear-gradient(180deg,#02030a,#000)]" />
-          <div className="absolute inset-0 star-panel opacity-60" />
-          <div className="relative w-[min(420px,90vw)] text-center">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2.8, repeat: Infinity, ease: "linear" }}
-              className="mx-auto mb-6 grid h-16 w-16 place-items-center rounded-2xl border border-cyan/30 bg-white/[0.05] shadow-glow sm:h-20 sm:w-20"
-            >
-              <span className="font-display text-xl font-bold text-white">SP</span>
-            </motion.div>
-            <div className="mx-auto max-w-sm rounded-2xl border border-cyan/15 bg-black/45 p-4 text-left font-mono text-[11px] leading-6 shadow-glow backdrop-blur sm:text-xs">
-              {bootLines.map((line, index) => (
-                <motion.p
-                  key={line}
-                  initial={{ opacity: 0, x: -8 }}
-                  animate={{ opacity: visibleLines > index ? 1 : 0, x: visibleLines > index ? 0 : -8 }}
-                  transition={{ duration: 0.22, ease: "easeOut" }}
-                  className={index === 0 ? "text-cyan" : "text-white/72"}
-                >
-                  &gt; {line}
-                </motion.p>
-              ))}
+          <div className="w-[min(280px,80vw)] text-center">
+            <h1 className="font-display text-lg font-medium tracking-[0.2em] text-white uppercase">
+              SRIRAM PS
+            </h1>
+            <p className="mt-1 font-mono text-[9px] tracking-wider text-zinc-500 uppercase">
+              Systems & AI Portfolio
+            </p>
+            <div className="mt-6 h-[2px] w-full bg-zinc-800 rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-blue-600 transition-all ease-out duration-100" 
+                style={{ width: `${progress}%` }} 
+              />
             </div>
-            <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-white/10">
-              <motion.div className="h-full bg-gradient-to-r from-cyan to-violet" animate={{ width: `${progress}%` }} />
-            </div>
-            <p className="mt-4 text-sm font-medium text-cyan">{progress}%</p>
+            <p className="mt-3 font-mono text-[10px] text-zinc-400">{Math.round(progress)}%</p>
           </div>
         </motion.div>
       )}

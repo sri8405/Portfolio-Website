@@ -60,257 +60,270 @@ export const rotatingTitles = [
 
 export const profileStats = [
   { label: "Engineering Domains", value: "06", detail: "AI, backend, full-stack, systems, security, data" },
-  { label: "Featured Systems", value: "07", detail: "Curated for depth over repository count" },
-  { label: "Research Threads", value: "05", detail: "LLMs, smart cities, Linux, ZKPs, audio ML" }
+  { label: "Featured Systems", value: "05", detail: "Curated for depth over repository count" },
+  { label: "Research Threads", value: "04", detail: "MARL activation scheduling, smart cities, embedded Linux" }
 ];
+
+const accentTone = "#3b82f6";
 
 export const techGroups: Array<{
   category: string;
   items: Array<{ name: string; icon: IconType; tone: string }>;
 }> = [
   {
-    category: "AI, ML & Data",
+    category: "AI/ML & GenAI",
     items: [
-      { name: "Python", icon: SiPython, tone: "#4b8bbe" },
-      { name: "TensorFlow", icon: SiTensorflow, tone: "#ff8f00" },
-      { name: "PyTorch", icon: SiPytorch, tone: "#ee4c2c" },
-      { name: "scikit-learn", icon: SiScikitlearn, tone: "#f7931e" },
-      { name: "NumPy", icon: SiNumpy, tone: "#4dabcf" },
-      { name: "pandas", icon: SiPandas, tone: "#f5f5f5" },
-      { name: "Streamlit", icon: SiStreamlit, tone: "#ff4b4b" },
-      { name: "Ollama", icon: SiOllama, tone: "#d9f99d" }
+      { name: "Machine Learning", icon: SiTensorflow, tone: accentTone },
+      { name: "scikit-learn", icon: SiScikitlearn, tone: accentTone },
+      { name: "Model Training & Eval", icon: SiPytorch, tone: accentTone },
+      { name: "Feature Engineering", icon: SiNumpy, tone: accentTone },
+      { name: "NLP", icon: SiPython, tone: accentTone },
+      { name: "LLMs & RAG", icon: SiOllama, tone: accentTone },
+      { name: "Agentic AI", icon: SiOllama, tone: accentTone },
+      { name: "Multi-Agent Systems", icon: SiPython, tone: accentTone }
     ]
   },
   {
-    category: "Product Engineering",
+    category: "Programming Languages",
     items: [
-      { name: "Next.js", icon: SiNextdotjs, tone: "#f8fafc" },
-      { name: "React", icon: SiReact, tone: "#61dafb" },
-      { name: "TypeScript", icon: SiTypescript, tone: "#3178c6" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, tone: "#38bdf8" },
-      { name: "JavaScript", icon: SiJavascript, tone: "#f7df1e" },
-      { name: "C++", icon: SiCplusplus, tone: "#659ad2" }
+      { name: "Python", icon: SiPython, tone: accentTone },
+      { name: "Java", icon: FaJava, tone: accentTone },
+      { name: "C/C++", icon: SiCplusplus, tone: accentTone },
+      { name: "JavaScript", icon: SiJavascript, tone: accentTone },
+      { name: "TypeScript", icon: SiTypescript, tone: accentTone },
+      { name: "SQL", icon: FaDatabase, tone: accentTone }
     ]
   },
   {
-    category: "Backend, Data & Infra",
+    category: "Data Science & Analytics",
     items: [
-      { name: "Java", icon: FaJava, tone: "#f89820" },
-      { name: "Spring", icon: SiSpring, tone: "#6db33f" },
-      { name: "FastAPI", icon: SiFastapi, tone: "#009688" },
-      { name: "Flask", icon: SiFlask, tone: "#f5f5f5" },
-      { name: "MongoDB", icon: SiMongodb, tone: "#47a248" },
-      { name: "PostgreSQL", icon: SiPostgresql, tone: "#4169e1" },
-      { name: "Redis", icon: SiRedis, tone: "#dc382d" },
-      { name: "Docker", icon: SiDocker, tone: "#2496ed" }
+      { name: "pandas", icon: SiPandas, tone: accentTone },
+      { name: "NumPy", icon: SiNumpy, tone: accentTone },
+      { name: "EDA", icon: SiPandas, tone: accentTone },
+      { name: "Data Cleaning", icon: SiNumpy, tone: accentTone },
+      { name: "Data Preprocessing", icon: SiPandas, tone: accentTone },
+      { name: "Data Visualization", icon: SiStreamlit, tone: accentTone }
     ]
   },
   {
-    category: "Systems & Security",
+    category: "Web & APIs",
     items: [
-      { name: "Linux", icon: SiLinux, tone: "#f5f5f5" },
-      { name: "Buildroot", icon: SiLinux, tone: "#a7ff5c" },
-      { name: "Yocto", icon: SiLinux, tone: "#48e2ff" },
-      { name: "Git", icon: SiGit, tone: "#f05032" },
-      { name: "Circom", icon: FaDatabase, tone: "#c084fc" },
-      { name: "AES-GCM", icon: FaDatabase, tone: "#fb7185" }
+      { name: "REST APIs", icon: SiFastapi, tone: accentTone },
+      { name: "FastAPI", icon: SiFastapi, tone: accentTone },
+      { name: "Flask", icon: SiFlask, tone: accentTone },
+      { name: "WebSockets", icon: SiNextdotjs, tone: accentTone },
+      { name: "Next.js", icon: SiNextdotjs, tone: accentTone },
+      { name: "React", icon: SiReact, tone: accentTone },
+      { name: "Tailwind CSS", icon: SiTailwindcss, tone: accentTone },
+      { name: "JSON", icon: SiJavascript, tone: accentTone }
+    ]
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "PostgreSQL", icon: SiPostgresql, tone: accentTone },
+      { name: "MongoDB", icon: SiMongodb, tone: accentTone },
+      { name: "MySQL", icon: FaDatabase, tone: accentTone },
+      { name: "PL/SQL", icon: FaDatabase, tone: accentTone },
+      { name: "OracleDB", icon: FaDatabase, tone: accentTone },
+      { name: "SQLite", icon: FaDatabase, tone: accentTone },
+      { name: "Database Design", icon: FaDatabase, tone: accentTone }
+    ]
+  },
+  {
+    category: "Software Engineering & Tools",
+    items: [
+      { name: "DSA", icon: SiCplusplus, tone: accentTone },
+      { name: "OOP", icon: FaJava, tone: accentTone },
+      { name: "SOLID Principles", icon: SiTypescript, tone: accentTone },
+      { name: "Agile/SDLC", icon: SiGit, tone: accentTone },
+      { name: "Debugging", icon: SiLinux, tone: accentTone },
+      { name: "Git", icon: SiGit, tone: accentTone },
+      { name: "Docker", icon: SiDocker, tone: accentTone },
+      { name: "Linux", icon: SiLinux, tone: accentTone },
+      { name: "Postman", icon: SiFastapi, tone: accentTone },
+      { name: "Streamlit", icon: SiStreamlit, tone: accentTone }
     ]
   }
 ];
 
 export const experiences = [
   {
-    role: "Product Engineering Intern",
-    company: "Loginware Softtech",
-    period: "Internship",
+    role: "Project Intern",
+    company: "Latavya Technologies / Bangalore Traffic Police",
+    period: "Apr 2025 – Mar 2026",
     points: [
-      "Worked through production-style engineering cycles spanning backend workflows, UI polish, debugging, and technical documentation.",
-      "Strengthened practical understanding of how product constraints shape APIs, data models, and user-facing reliability.",
-      "Built confidence in reading unfamiliar code, isolating defects, and communicating tradeoffs clearly."
+      "Built a full-stack Smart Parking Management application for the Bangalore Traffic Police.",
+      "Designed MongoDB schemas and REST APIs for parking records, vehicle logs, and dynamic availability updates.",
+      "Worked in an Agile team with structured debugging, Git-based version control, and shipped production-ready features end-to-end."
     ],
-    tags: ["Product Engineering", "Debugging", "Backend", "Documentation"]
+    tags: ["Smart City", "MongoDB", "REST APIs", "Agile", "Version Control"]
   },
   {
-    role: "Smart Parking Systems Builder",
-    company: "Latavya Technologies / Independent Build",
-    period: "Applied Systems",
+    role: "Embedded Linux Development Intern",
+    company: "Loginware Softtech Pvt. Ltd.",
+    period: "Aug 2024 – Sep 2024",
     points: [
-      "Designed a smart parking platform around slot allocation, vehicle movement, admin visibility, and real-time monitoring.",
-      "Modeled the project as urban infrastructure: sensor-ready events, analytics dashboards, routing logic, and scalable API boundaries.",
-      "Converted a parking workflow into a smart-city case study with product, architecture, and AI integration layers."
+      "Configured embedded Linux system configurations using Buildroot and cross-compilation toolchains.",
+      "Automated build and test workflows to debug low-level systems issues and improve overall system stability."
     ],
-    tags: ["Smart Cities", "MongoDB", "APIs", "Analytics"]
-  },
-  {
-    role: "Linux Systems Research",
-    company: "Buildroot, Yocto, antiX, Zorin OS, Raspberry Pi OS Lite",
-    period: "Research Track",
-    points: [
-      "Explored lightweight Linux distributions, custom images, VirtualBox limitations, and constrained hardware workflows.",
-      "Studied boot pipelines, package selection, image generation, and how low-level system choices affect deployment.",
-      "Documented failures and tradeoffs as engineering evidence rather than treating them as dead ends."
-    ],
-    tags: ["Buildroot", "Yocto", "Raspberry Pi", "Virtualization"]
+    tags: ["Embedded Linux", "Buildroot", "Cross-Compilation", "Automation", "Debugging"]
   }
 ];
 
-export const smartParking = {
-  title: "AI-Powered Smart Parking & Urban Traffic Optimization System",
-  label: "Flagship Smart-City Platform",
-  liveDemo: "https://parkitsmart.vercel.app/",
-  github: contact.github,
-  summary:
-    "A startup-grade smart-city platform concept for real-time parking occupancy, intelligent slot allocation, vehicle flow visibility, and traffic-aware routing.",
-  metrics: [
-    { label: "Occupancy", value: "78%", tone: "cyan" },
-    { label: "Free Slots", value: "124", tone: "acid" },
-    { label: "Avg. Routing", value: "42s", tone: "violet" },
-    { label: "Sensor Events", value: "18k", tone: "rose" }
-  ],
-  capabilities: [
-    "Smart slot allocation",
-    "Parking occupancy management",
-    "Vehicle tracking",
-    "Urban traffic optimization",
-    "IoT-ready sensor event model",
-    "Real-time admin monitoring",
-    "Automation workflows",
-    "AI routing possibilities"
-  ],
-  subsections: [
-    {
-      title: "Problem Statement",
-      body: "Urban parking fails when drivers, lots, sensors, and administrators operate without a shared real-time state. The system reframes parking as city infrastructure."
-    },
-    {
-      title: "Why Urban Parking Is Difficult",
-      body: "Demand spikes, illegal waiting, partial occupancy visibility, and slow manual updates create congestion before a vehicle even reaches the destination."
-    },
-    {
-      title: "Smart Allocation Workflow",
-      body: "Vehicle intent enters the platform, availability is filtered by zone and constraints, a slot is reserved, and routing updates continue as occupancy changes."
-    },
-    {
-      title: "System Architecture",
-      body: "The architecture separates user apps, admin dashboards, allocation APIs, telemetry ingestion, analytics stores, and future ML services."
-    },
-    {
-      title: "Real-Time Monitoring",
-      body: "Operators get live slot grids, occupancy trends, abnormal congestion signals, event streams, and action-oriented zone health summaries."
-    },
-    {
-      title: "AI Integration Possibilities",
-      body: "Forecast demand, predict exits, cluster congestion zones, suggest dynamic pricing, and optimize routes based on historical and live traffic patterns."
-    },
-    {
-      title: "Scalability Architecture",
-      body: "The design can evolve toward event queues, cached availability reads, partitioned city zones, sensor streams, and read-heavy analytics replicas."
-    },
-    {
-      title: "Technical Challenges",
-      body: "The hardest parts are consistency under simultaneous reservations, noisy sensor data, routing freshness, and building admin tools that reveal the right anomalies."
-    },
-    {
-      title: "Future Roadmap",
-      body: "Add camera/IoT ingestion, predictive occupancy models, city-level route optimization, operator alerts, and simulation for new parking zones."
-    },
-    {
-      title: "Smart City Integration",
-      body: "The parking layer can feed traffic lights, municipal dashboards, EV charging maps, enforcement workflows, and urban planning analytics."
-    }
-  ]
-};
+export interface ProjectType {
+  title: string;
+  short: string;
+  status: string;
+  statusType: "live" | "prototype" | "learning";
+  stack: string[];
+  description: string;
+  badge?: string;
+  highlight: string;
+  decision: string;
+  challenges: string;
+  github?: string;
+  live?: string;
+}
 
-export const featuredProjects = [
+export const featuredProjects: ProjectType[] = [
+  {
+    title: "ParkItSmart - AI-Powered Smart Parking & Urban Traffic Optimization Platform",
+    short: "ParkItSmart",
+    status: "Live Deployed System",
+    statusType: "live",
+    badge: "Flagship Project",
+    stack: ["MongoDB", "REST APIs", "Node.js", "Express.js", "Agile", "Git"],
+    description: "A production-grade smart-city platform designed for real-time parking occupancy, intelligent slot allocation, vehicle flow tracking, and reporting. Built during my internship at Latavya Technologies for the Bangalore Traffic Police, replacing manual paper-based processes with an automated digital system.",
+    highlight: "Automated real-time slot allocation, vehicle entry tracking, and live admin reporting dashboards.",
+    decision: "Chose MongoDB's flexible schema over a relational database to accommodate frequently changing vehicle log and slot status data fields during active feature iteration and feedback cycles with the client.",
+    challenges: "Replaced manual paper-based processes by designing high-availability REST endpoints that handle simultaneous occupancy updates without state drift.",
+    github: "https://github.com/sri8405/parking-mngmt-sys",
+    live: "https://parkitsmart.vercel.app/"
+  },
+  {
+    title: "Cravio - Food Delivery & Real-Time Tracking Platform",
+    short: "Cravio",
+    status: "MVP Live",
+    statusType: "live",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "WebSockets", "REST APIs", "Node.js"],
+    description: "A full-stack food delivery and real-time order tracking platform that establishes low-latency bidirectional connections between restaurants, delivery agents, and customers.",
+    highlight: "Uses WebSockets for instant, event-driven order tracking and state changes across restaurant and client dashboards.",
+    decision: "Used WebSockets instead of HTTP polling for order-status updates to cut database queries, latency, and server load by over 80% during high concurrent volume.",
+    challenges: "Synchronized multiple state actors (delivery partner coordinates, restaurant prep queues, customer dashboards) with a unified event loop.",
+    github: "https://github.com/sri8405/cravio_fe",
+    live: "https://cravio.tech/"
+  },
+  {
+    title: "GuruSeva - Temple Donation & Seva Management System",
+    short: "GuruSeva",
+    status: "MVP Live",
+    statusType: "live",
+    badge: "Payments & Systems Engineering",
+    stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "MongoDB", "NextAuth.js", "Razorpay API"],
+    description: "A full-stack temple donation and seva (ritual booking) management platform featuring production-grade payment logic, automatic transaction recovery, and role-based administration.",
+    highlight: "Handles server-side signature verification, payment idempotency, and automated recovery loops to guarantee transaction consistency.",
+    decision: "Built idempotent payment handling with atomic MongoDB operations specifically to prevent double-charges from Razorpay webhook retries and concurrent donation requests — a failure mode simple donation forms usually miss.",
+    challenges: "Engineered automatic transaction recovery and signature verification to handle Razorpay webhook delivery failures and transaction drop-offs.",
+    github: "", // Omitted since no public repo is available
+    live: "https://guru-seva.me"
+  },
+  {
+    title: "Tourist Place Recommendation System",
+    short: "Travel-Tech Recommender",
+    status: "Learning Project",
+    statusType: "learning",
+    stack: ["Python", "Pandas", "NumPy", "Scikit-learn"],
+    description: "An ML recommendation system generating personalized destination suggestions and itinerary structures from user preferences and location metadata.",
+    highlight: "Applies exploratory data analysis, systematic data preprocessing, and user behavior matching.",
+    decision: "Prioritized feature engineering over model complexity, since preference data quality had a bigger impact on recommendation relevance than the algorithm choice.",
+    challenges: "Processed sparse and irregular user preference feedback, normalizing dataset feature inputs to avoid recommendation bias.",
+    github: "https://github.com/sri8405/tourist-places-project"
+  },
   {
     title: "AI-Powered Road Damage Detection & Spatial Analytics System",
     short: "Pothole Detector",
+    status: "Working Prototype",
+    statusType: "prototype",
     stack: ["Python", "YOLOv8", "Streamlit", "Folium", "DBSCAN"],
-    description:
-      "Computer-vision pipeline for detecting road damage, clustering incidents geospatially, and turning raw detections into maintenance intelligence.",
-    visuals: ["Detection pipeline", "Clustering workflow", "Interactive map", "Priority scoring"],
-    challenges: "Balancing noisy detections, map readability, and useful clustering thresholds for real-world civic workflows.",
-    actions: ["GitHub Repo", "Live Demo", "Architecture", "Case Study"]
-  },
-  {
-    title: "Privacy-Focused Budget Compliance System using Zero-Knowledge Proofs",
-    short: "cardanorize",
-    stack: ["Python", "Redis", "Docker", "AES-GCM", "Circom", "SnarkJS"],
-    description:
-      "A security-focused system where a user can prove budget compliance without exposing sensitive spending records.",
-    visuals: ["Encrypted data flow", "Proof generation", "Verifier service", "Redis-backed state"],
-    challenges: "Communicating ZKPs clearly while preserving the seriousness of cryptographic trust boundaries.",
-    actions: ["GitHub Repo", "Research Overview", "Technical Deep Dive", "Architecture"]
-  },
-  {
-    title: "AI-Based Audio Classification System",
-    short: "Music Genre Classifier",
-    stack: ["Python", "Librosa", "SQLite", "Streamlit"],
-    description:
-      "Audio ML workflow with feature extraction, waveform analysis, dataset organization, model evaluation, and interactive classification UI.",
-    visuals: ["Waveforms", "MFCC features", "Model pipeline", "Analytics dashboard"],
-    challenges: "Making audio features explainable enough for users to trust why a genre was predicted.",
-    actions: ["GitHub Repo", "Live Demo", "Architecture", "Case Study"]
-  },
-  {
-    title: "Experimental Audio Signal Processing System",
-    short: "Voice Suppressor",
-    stack: ["Python", "DSP", "Audio Processing", "Signal Analysis"],
-    description:
-      "Experimental pipeline for attenuating vocals and visualizing before/after waveform behavior through signal processing steps.",
-    visuals: ["Before waveform", "After waveform", "Filtering stages", "Spectral comparison"],
-    challenges: "Working with imperfect separation, artifacts, and the tradeoff between suppression strength and audio quality.",
-    actions: ["GitHub Repo", "Architecture", "Experiment Notes"]
-  },
-  {
-    title: "Tourist Recommendation & Itinerary Planner",
-    short: "Travel-Tech Recommender",
-    stack: ["Python", "Recommendation Systems", "Maps", "Data Analysis"],
-    description:
-      "Polished travel-tech concept that converts destination data and preferences into recommendations, itinerary flow, and planning analytics.",
-    visuals: ["Recommendation logic", "Itinerary generation", "Map flow", "Preference analytics"],
-    challenges: "Combining relevance, route practicality, and user intent into a planner that feels useful rather than random.",
-    actions: ["GitHub Repo", "Live Demo", "Architecture", "Case Study"]
+    description: "A computer-vision system that detects potholes from road imagery, clusters detections geospatially, and overlays them on interactive maps to isolate maintenance priority zones.",
+    highlight: "Deploys a custom YOLOv8 model combined with DBSCAN density clustering to group sparse potholes into actionable maintenance zones.",
+    decision: "Used DBSCAN over simple distance thresholds to cluster pothole detections, since it handles irregular road-damage density better than fixed-radius grouping.",
+    challenges: "Managed false positives from varying road lighting conditions and filtered overlapping bounding box coordinates using NMS thresholds.",
+    github: "https://github.com/sri8405/Pothole-detector"
   }
 ];
 
 export const currentlyBuilding = [
   {
     title: "Cravio.tech",
-    status: "Production-ready MVP",
-    progress: 82,
+    status: "MVP Live",
+    progress: 85,
     href: "https://cravio.tech",
-    stack: ["Next.js", "Auth", "Database", "Scalable backend"],
-    note: "A live product build with authentication, persistent data, and deployment-focused engineering."
+    stack: ["Next.js", "WebSockets", "Node.js", "Tailwind CSS"],
+    note: "A live product build with authentication, persistent data, and low-latency tracking."
   },
   {
     title: "Local LLM Systems",
     status: "Research prototype",
     progress: 58,
-    stack: ["Ollama", "RAG", "Low-end hardware"],
-    note: "Experiments around private inference, constrained compute, and useful local AI workflows."
+    stack: ["Ollama", "RAG", "Constrained hardware"],
+    note: "Experiments around private inference, constrained compute, and local AI workflows."
   },
   {
     title: "Smart City AI Systems",
     status: "Architecture track",
     progress: 66,
-    stack: ["Traffic AI", "IoT", "Analytics"],
-    note: "Extending parking intelligence toward city-scale mobility and civic operations."
-  },
-  {
-    title: "Applied AI Experiments",
-    status: "Continuous",
-    progress: 74,
-    stack: ["Vision", "Audio", "Spatial ML"],
-    note: "Small research builds that test practical AI patterns before turning them into products."
+    stack: ["Traffic AI", "IoT", "MongoDB"],
+    note: "Extending smart parking infrastructure telemetry toward city-scale municipal operations."
   }
 ];
 
 export const systemsResearch = [
-  "Buildroot image generation and package selection",
-  "Yocto Project research and embedded Linux tradeoffs",
-  "antiX and Zorin OS customization experiments",
-  "Raspberry Pi OS Lite deployment thinking",
-  "VirtualBox limitations, device access issues, and resource constraints",
-  "Low-level Linux experimentation as infrastructure learning"
+  "Buildroot image generation and custom cross-compilation",
+  "Yocto Project workflows and embedded Linux customization",
+  "antiX and Zorin OS low-spec system configuration",
+  "Raspberry Pi OS Lite deployment and headless execution",
+  "VirtualBox hardware pass-through and host-guest networking",
+  "Low-level Linux kernel parameters and bootloader troubleshooting"
+];
+
+export interface HighlightType {
+  title: string;
+  metric?: string;
+  detail: string;
+  category: string;
+}
+
+export const engineeringHighlights: HighlightType[] = [
+  {
+    category: "Hackathon Award",
+    title: "Cardano Hackathon Asia 2025 Grand Finalist",
+    metric: "Top 0.5%",
+    detail: "Ranked as a Grand Finalist out of 5,500+ competing engineering teams globally."
+  },
+  {
+    category: "Full Stack Internship",
+    title: "Bangalore Traffic Police Smart Parking System",
+    metric: "Municipal Deployment",
+    detail: "Shipped core allocation and telemetry APIs replacing manual, paper-based tracking."
+  },
+  {
+    category: "Real-Time Systems",
+    title: "Cravio Real-Time Tracking Engine",
+    metric: "WebSocket Sync",
+    detail: "Designed WebSocket-based bidirectional tracking between restaurants, agents, and clients."
+  },
+  {
+    category: "Backend Systems",
+    title: "GuruSeva Webhook payment verification",
+    metric: "Idempotent Payments",
+    detail: "Mitigated double-charging race conditions under webhook signature retry loops."
+  },
+  {
+    category: "Research Publish",
+    title: "Dependency-Aware MARL Activation Scheduling",
+    metric: "Target: ERCICAM 2026",
+    detail: "Proposed Directed Graph activation rules to stabilize policy convergence in MARL."
+  }
 ];
